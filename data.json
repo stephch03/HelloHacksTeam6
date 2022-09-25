@@ -5,11 +5,11 @@
       "module": [
           {
               "moduleName": "M1",
-              "completed": "true"
+              "completed": true
           },
           {
               "moduleName": "M2",
-              "completed": "false"
+              "completed": false
           }
       ]
   },
@@ -19,11 +19,11 @@
       "module": [
           {
               "moduleName": "Module 1",
-              "completed": "false"
+              "completed": false
           },
           {
               "moduleName": "Module 2",
-              "completed": "false"
+              "completed": false
           }
       ]
   }
