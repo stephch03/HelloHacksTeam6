@@ -1,18 +1,30 @@
 [
-    {
-      "username": "jaypark",
-      "e-mail": "jaybinpark@gmail.com",
-      "password": "hahaha"
-    },
-    {
-        "username": "michelle",
-        "e-mail": "michelle@gmail.com",
-        "password": "michelle"
-      },
-
-      {
-        "username": "stephanie",
-        "e-mail": "stephanie@gmail.com",
-        "password": "stephanie"
-      }
-  ]
+  {
+      "courseName": "Course 1",
+      "code": "CPSC 110",
+      "module": [
+          {
+              "moduleName": "M1",
+              "completed": "true"
+          },
+          {
+              "moduleName": "M2",
+              "completed": "false"
+          }
+      ]
+  },
+  {
+      "courseName": "Course 2",
+      "code": "CPSC 121",
+      "module": [
+          {
+              "moduleName": "Module 1",
+              "completed": "false"
+          },
+          {
+              "moduleName": "Module 2",
+              "completed": "false"
+          }
+      ]
+  }
+]
