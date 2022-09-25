@@ -1,6 +1,6 @@
-import {
+import 
     createCourse
-  } from "./courses.js";
+    from "./course.js";
   
   const showResult = document.getElementById("result");
   const createCourseForm = document.getElementById("createCourseForm");

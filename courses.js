@@ -6,9 +6,7 @@ export function createCourse(input) {
     const courseExists = courses.find((course) => {
         return course.courseName === input.courseName;
     });
-    const newCourse = {
-        courseName: input.courseName,
-    };
+    const newCourse = input.courseName
 
     courses.push(newCourse);
     return courses;
