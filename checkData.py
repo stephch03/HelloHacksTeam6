@@ -15,7 +15,9 @@ def add_course(us, en, pw, cn):
 
     with open('database.txt') as f:
         lines = f.readlines()
-    pos = lines.index(check)
+    if any(check in s for s in lines):
+        print(s)
+    //pos = lines.index(check)
     lines = lines[:pos + 2 + en.length() + pw.length()] + str(cn) + lines[pos + 2 + en.length() + pw.length():]
     lines.find(check)
 
