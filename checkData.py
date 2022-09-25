@@ -9,18 +9,51 @@ def add_user(us,em,pw):
         lines = f.readlines()
     if check not in lines:
         write_user(us,em,pw)
+
+#def find_string(txt, str1):
+ # return txt.find(str1, txt.find(str1)+1)
+
 def add_course(us, en, pw, cn):
     check = "[USER: " + us 
-
-
+    courseCheck ="[COURSE: " + cn
     with open('database.txt') as f:
         lines = f.readlines()
-    if any(check in s for s in lines):
-        print(s)
-    //pos = lines.index(check)
-    lines = lines[:pos + 2 + en.length() + pw.length()] + str(cn) + lines[pos + 2 + en.length() + pw.length():]
-    lines.find(check)
+        length = len(lines)
 
+        for i in range(length):
+
+            if check in lines[i]:
+                if courseCheck not in lines[i]:
+                    end = lines[i].index("]")
+                    lines[i] =  lines[i][:end] + "(" + "COURSE: " + cn + ")" + "]"
+
+        f = open('database.txt', 'w')
+        #clear()
+        for i in range(length):
+            f.write(lines[i] + "\n")
+        f.close()
+def add_module(us, cn, mn):
+    check = "[USER: " + us 
+    courseCheck ="(COURSE: " + cn
+    with open('database.txt') as f:
+        lines = f.readlines()
+        length = len(lines)
+
+        for i in range(length):
+
+            if check in lines[i]:
+                if courseCheck in lines[i]:
+                    cnl = len(courseCheck)
+
+                    cc= lines[i].index(courseCheck)
+
+                    lines[i] =  lines[i][:cc] + mn + "," + lines[i][cc:] 
+
+        f = open('database.txt', 'w')
+        clear()
+        for i in range(length):
+            f.write(lines[i] + "\n")
+        f.close()
 
 
 def write_user(username, email, password):
