@@ -1,19 +1,17 @@
 import data from "./data.json" assert {type: 'json'};
 
-let people = data;
-
-
+let courses = data;
 
 export function createCourse(input) {
-    const courseExists = people.find((course) => {
+    const courseExists = courses.find((course) => {
         return course.courseName === input.courseName;
     });
     const newCourse = {
         courseName: input.courseName,
     };
 
-    people.push(newCourse);
-    return people;
+    courses.push(newCourse);
+    return courses;
 }
 
 export function createPeople(input) {
