@@ -1,6 +1,6 @@
 import {
     createCourse
-  } from "./video.js";
+  } from "./courses.js";
   
   const showResult = document.getElementById("result");
   const createCourseForm = document.getElementById("createCourseForm");
