@@ -1,8 +1,0 @@
-
-
-
-
-[USER: jay,jay,jay(COURSE: CPSC110 ,HTDF ,HTDF ,HTDF)]
-
-[USER: emily,jay,jay]
-
