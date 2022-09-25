@@ -2,22 +2,17 @@ import data from "./data.json" assert {type: 'json'};
 let people = data;
 
 export function createPeople(input) {
-  const idExists = people.find((person) => {
-    return person.name === input.name;
-  }); // We check if a user already exists with the same name; because we determined the name to be the id, we do not want to create an entry with a duplicate id.
+  const linkExists = people.find((video) => {
+    return video.link === input.link;
+  }); 
   if (idExists) {
-    return people; // You could return an error here instead; this would be a design choice!
+    return console.log("Welcome"); 
   }
-  const newPerson = {
-    name: input.name,
-    // Ternary expression syntax: "?" means "if", ":" means "else"
-    interests: input.interests ? input.interests.split(",") : [],
-    subscribed: Boolean(input.subscribed),
-    demographics: {
-      country: input.country,
-      age: Number(input.age)
-    }
-  };
+  const newVideo = {
+    link: input.link,
+    title: input.title;
+    ,
+    };
   people.push(newPerson);
   return people;
 }
