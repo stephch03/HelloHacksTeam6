@@ -1,6 +1,8 @@
-import 
-    createCourse
-    from "./courses.js";
+import {
+    createCourse,
+    createModule
+
+}from "./courses.js";
   
   const showResult = document.getElementById("result");
   const createCourseForm = document.getElementById("createCourseForm");
@@ -10,6 +12,14 @@ import
     const formData = new FormData(event.target);
     const formProps = Object.fromEntries(formData);
     const result = createCourse(formProps);
+    showResult.innerHTML = JSON.stringify(result, null, 2);
+  });
+
+  createModuleForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const formProps = Object.fromEntries(formData);
+    const result = createModule(formProps);
     showResult.innerHTML = JSON.stringify(result, null, 2);
   });
   
